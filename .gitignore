@@ -5,10 +5,10 @@ __pycache__/
 
 # Node
 node_modules/
-frontend/dist/
+frontend/
 
 # Java build
-backend/target/
+backend/
 
 # IDE
 .idea/
