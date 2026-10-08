@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 车间大屏</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="screen-body">
+    <div class="screen-shell">
+      <header class="screen-header">
+        <div>
+          <div class="eyebrow light">车间生产看板</div>
+          <h1>铁路货车智能检修车间</h1>
+        </div>
+        <div class="screen-clock">2026-10-05 11:45</div>
+      </header>
+
+      <section class="screen-stats">
+        <div class="screen-card">
+          <span>今日任务</span>
+          <strong>148</strong>
+        </div>
+        <div class="screen-card">
+          <span>已完成</span>
+          <strong>136</strong>
+        </div>
+        <div class="screen-card">
+          <span>在修车辆</span>
+          <strong>28</strong>
+        </div>
+        <div class="screen-card warning-card">
+          <span>预警件数</span>
+          <strong>23</strong>
+        </div>
+      </section>
+
+      <section class="screen-grid">
+        <div class="screen-panel">
+          <div class="panel-header light-header">
+            <div>
+              <div class="eyebrow light">工位情况</div>
+              <h2>生产节拍状态</h2>
+            </div>
+          </div>
+          <div class="screen-bars">
+            <div class="screen-bar-item"><label>工位 A1</label><div class="screen-bar"><i style="width: 92%"></i></div><span>92%</span></div>
+            <div class="screen-bar-item"><label>工位 A2</label><div class="screen-bar"><i style="width: 76%"></i></div><span>76%</span></div>
+            <div class="screen-bar-item"><label>工位 B3</label><div class="screen-bar"><i style="width: 88%"></i></div><span>88%</span></div>
+            <div class="screen-bar-item"><label>工位 C4</label><div class="screen-bar"><i style="width: 68%"></i></div><span>68%</span></div>
+          </div>
+        </div>
+
+        <div class="screen-panel">
+          <div class="panel-header light-header">
+            <div>
+              <div class="eyebrow light">故障分布</div>
+              <h2>关键预警</h2>
+            </div>
+          </div>
+          <div class="screen-list">
+            <div><span>磨损超标</span><strong>12</strong></div>
+            <div><span>裂纹风险</span><strong>5</strong></div>
+            <div><span>振动异常</span><strong>3</strong></div>
+            <div><span>待复检</span><strong>8</strong></div>
+          </div>
+        </div>
+
+        <div class="screen-panel wide-panel">
+          <div class="panel-header light-header">
+            <div>
+              <div class="eyebrow light">任务进度</div>
+              <h2>当前阶段流程</h2>
+            </div>
+          </div>
+          <div class="screen-flow">
+            <div class="screen-flow-item done"><span>扣修</span></div>
+            <div class="screen-flow-item done"><span>采集</span></div>
+            <div class="screen-flow-item active"><span>检修</span></div>
+            <div class="screen-flow-item"><span>质检</span></div>
+            <div class="screen-flow-item"><span>交付</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

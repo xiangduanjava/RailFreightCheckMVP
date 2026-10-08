@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+frontend/dist/
+
+# Java build
+backend/target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Local tooling / secrets
+.claude/
+.codemoss/
+
+# Env / logs
+.env
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

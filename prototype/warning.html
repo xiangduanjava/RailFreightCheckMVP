@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 预警中心</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="demo.html" class="nav-item"><span>📌</span> 项目介绍</a>
+          <a href="index.html" class="nav-item"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item"><span>📡</span> 设备采集</a>
+          <a href="dispatch.html" class="nav-item"><span>🧭</span> 生产调度</a>
+          <a href="warning.html" class="nav-item active"><span>⚠️</span> 预警中心</a>
+          <a href="report.html" class="nav-item"><span>📊</span> 报表统计</a>
+          <a href="screen.html" class="nav-item"><span>🖥️</span> 车间大屏</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel detail-page">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">基础故障预警</div>
+            <h1>异常预警中心</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">导出告警</button>
+            <button class="primary-btn">处理预警</button>
+          </div>
+        </header>
+
+        <section class="warning-grid">
+          <div class="panel warning-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">预警列表</div>
+                <h2>待处理告警</h2>
+              </div>
+            </div>
+
+            <div class="alert-list large-alerts">
+              <div class="alert-row">
+                <div>
+                  <strong>AX-20240618-003</strong>
+                  <span>轮轴磨损超出标准；已触发二级预警</span>
+                </div>
+                <div class="alert-badge high">高</div>
+              </div>
+              <div class="alert-row">
+                <div>
+                  <strong>AX-20240618-112</strong>
+                  <span>超声波探伤需在 30 分钟内复检</span>
+                </div>
+                <div class="alert-badge mid">中</div>
+              </div>
+              <div class="alert-row">
+                <div>
+                  <strong>车间任务超时</strong>
+                  <span>K66 车次已超出节拍计划 18 分钟</span>
+                </div>
+                <div class="alert-badge mid">中</div>
+              </div>
+              <div class="alert-row">
+                <div>
+                  <strong>采集缺失</strong>
+                  <span>1 条手持机录入数据未完成校验</span>
+                </div>
+                <div class="alert-badge low">低</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel stats-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">预警统计</div>
+                <h2>今日数据概览</h2>
+              </div>
+            </div>
+            <div class="mini-stat-grid">
+              <div class="mini-stat">
+                <span>超期未修</span>
+                <strong>9</strong>
+              </div>
+              <div class="mini-stat">
+                <span>参数超标</span>
+                <strong>7</strong>
+              </div>
+              <div class="mini-stat">
+                <span>即将报废</span>
+                <strong>4</strong>
+              </div>
+              <div class="mini-stat">
+                <span>已处理</span>
+                <strong>18</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="eyebrow">趋势</div>
+              <h2>近七日预警走势</h2>
+            </div>
+          </div>
+          <div class="chart-bars">
+            <div class="bar-group"><span>Mon</span><i style="height: 40%"></i></div>
+            <div class="bar-group"><span>Tue</span><i style="height: 48%"></i></div>
+            <div class="bar-group"><span>Wed</span><i style="height: 62%"></i></div>
+            <div class="bar-group"><span>Thu</span><i style="height: 58%"></i></div>
+            <div class="bar-group"><span>Fri</span><i style="height: 72%"></i></div>
+            <div class="bar-group"><span>Sat</span><i style="height: 66%"></i></div>
+            <div class="bar-group"><span>Sun</span><i style="height: 80%"></i></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+schema: spec-driven
+
+context: |
+  - 语言：简体中文，所有制品必须用简体中文撰写
+  - 领域：铁路货车智能检修系统 MVP
+  - 技术栈：SpringBoot / Vue3 / Node.js / MySQL / MinIO（私有部署）
+  - 目录：后端 backend/，前端 frontend/
+  - 密钥：外部配置（api key 等）统一放 .env，.env 不入库、.gitignore 忽略
+  - MVP 范围：只做轮轴一个核心部件，验证后再扩展其他部件。只做PC端实现，暂不涉及移动端。
+  - 模块优先级：①数字身份管理 ②工位数据采集 ③生产调度 ④故障预警统计
+  - 硬约束：国铁对接（HMIS / HCCBM）是刚需，但 MVP 阶段只保留接口抽象、用 mock 数据，不实现真实对接；HMIS 为出向上报，HCCBM 为入向获取，方向不同需分别设计
+  - 原型：prototype/ 是已定稿的静态原型（HTML+原生 JS，仅演示），是页面结构、交互、术语、字段名、枚举值的权威参考
+  - 前端实现：最终用 Vue3 重写，prototype/ 只是设计稿，不作为实现代码。
+  - 避坑：不上 AI 大模型/全故障预测，不替换现有硬件
+
+rules:
+  specs:
+    - 只描述「行为要求」与验收标准，不写技术选型
+    - 字段名、枚举值、页面结构必须与 prototype/ 一致，动笔前先读对应页面
+  design:
+    - 只写技术选型、架构与理由
+  tasks:
+    - 只写实施步骤，单步 ≤ 2 小时
+
+operations:
+  archive:
+    guidance:
+      - 每个 change 测试通过后必须归档
+  apply:
+    guidance:
+      - 每个 change 提交后必须测试通过
+
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+# Example:
+#   context: |
+#     Tech stack: TypeScript, React, Node.js
+#     We use conventional commits
+#     Domain: e-commerce platform
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing

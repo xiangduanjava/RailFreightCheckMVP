@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 设备采集</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="demo.html" class="nav-item"><span>📌</span> 项目介绍</a>
+          <a href="index.html" class="nav-item"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item active"><span>📡</span> 设备采集</a>
+          <a href="dispatch.html" class="nav-item"><span>🧭</span> 生产调度</a>
+          <a href="warning.html" class="nav-item"><span>⚠️</span> 预警中心</a>
+          <a href="report.html" class="nav-item"><span>📊</span> 报表统计</a>
+          <a href="screen.html" class="nav-item"><span>🖥️</span> 车间大屏</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel detail-page">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">工位数据自动采集</div>
+            <h1>设备采集与同步</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">同步日志</button>
+            <button class="primary-btn">开启批量上传</button>
+          </div>
+        </header>
+
+        <section class="device-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">在线设备</div>
+                <h2>工位设备状态</h2>
+              </div>
+            </div>
+
+            <div class="device-list">
+              <div class="device-item">
+                <div>
+                  <strong>轮对尺寸检测机</strong>
+                  <span>设备编号：D-01</span>
+                </div>
+                <span class="status-tag ok">在线</span>
+              </div>
+              <div class="device-item">
+                <div>
+                  <strong>超声波探伤仪</strong>
+                  <span>设备编号：U-02</span>
+                </div>
+                <span class="status-tag warn">校准中</span>
+              </div>
+              <div class="device-item">
+                <div>
+                  <strong>自动称重系统</strong>
+                  <span>设备编号：W-07</span>
+                </div>
+                <span class="status-tag ok">在线</span>
+              </div>
+              <div class="device-item">
+                <div>
+                  <strong>手持终端补录</strong>
+                  <span>设备编号：M-12</span>
+                </div>
+                <span class="status-tag alert">1 条待补录</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">实时同步</div>
+                <h2>数据上传状态</h2>
+              </div>
+            </div>
+            <div class="upload-chart">
+              <div class="ring-wrap">
+                <div class="ring-ring">94.2%</div>
+              </div>
+              <div class="upload-stats">
+                <div><span>今日采集</span><strong>1,248</strong></div>
+                <div><span>已上传</span><strong>1,178</strong></div>
+                <div><span>待同步</span><strong>70</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="eyebrow">采集日志</div>
+              <h2>最近 5 条同步记录</h2>
+            </div>
+          </div>
+          <div class="log-list">
+            <div class="log-item">
+              <span>09:42</span>
+              <strong>轮对尺寸检测机</strong>
+              <p>AX-20240618-104 检测数据已上传</p>
+            </div>
+            <div class="log-item">
+              <span>10:15</span>
+              <strong>超声波探伤仪</strong>
+              <p>裂纹风险结果已下发给修复工位</p>
+            </div>
+            <div class="log-item">
+              <span>10:38</span>
+              <strong>手持终端</strong>
+              <p>补录 1 条字段缺失数据，等待校验</p>
+            </div>
+            <div class="log-item">
+              <span>11:03</span>
+              <strong>自动称重系统</strong>
+              <p>重量数据与工单一致，已确认</p>
+            </div>
+            <div class="log-item">
+              <span>11:47</span>
+              <strong>云端同步</strong>
+              <p>国铁 HMIS 上传任务已完成</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

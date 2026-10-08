@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - MVP 原型</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="demo.html" class="nav-item"><span>📌</span> 项目介绍</a>
+          <a href="index.html" class="nav-item active"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item"><span>📡</span> 设备采集</a>
+          <a href="dispatch.html" class="nav-item"><span>🧭</span> 生产调度</a>
+          <a href="warning.html" class="nav-item"><span>⚠️</span> 预警中心</a>
+          <a href="report.html" class="nav-item"><span>📊</span> 报表统计</a>
+          <a href="screen.html" class="nav-item"><span>🖥️</span> 车间大屏</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <div class="card-label">当前任务</div>
+          <div class="task-pill">12个检修工位</div>
+          <div class="task-pill">3个超时预警</div>
+          <div class="task-pill">1个待补录数据</div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">MVP 运行状态</div>
+            <h1>铁路货车智能检修系统</h1>
+          </div>
+
+          <div class="topbar-actions">
+            <input id="searchInput" class="search-box" type="text" placeholder="🔎 搜索轮轴ID / 车号 / 故障类型" />
+            <button class="ghost-btn">导出报表</button>
+            <button class="primary-btn">新增任务</button>
+          </div>
+        </header>
+
+        <section class="filter-bar" aria-label="筛选条件">
+          <button class="filter-btn active" data-filter="全部">全部</button>
+          <button class="filter-btn" data-filter="在修">在修</button>
+          <button class="filter-btn" data-filter="待复检">待复检</button>
+          <button class="filter-btn" data-filter="预警">预警</button>
+          <button class="filter-btn" data-filter="已出库">已出库</button>
+        </section>
+
+        <section class="kpis">
+          <div class="kpi-card primary">
+            <div class="kpi-top">
+              <span>在修轮轴</span>
+              <span class="trend up">+12%</span>
+            </div>
+            <div class="kpi-value">286</div>
+            <div class="kpi-footer">较昨日上升 18 辆</div>
+          </div>
+
+          <div class="kpi-card solid">
+            <div class="kpi-top">
+              <span>已上传数据</span>
+              <span class="trend up">+8.3%</span>
+            </div>
+            <div class="kpi-value">94.2%</div>
+            <div class="kpi-footer">自动采集覆盖率</div>
+          </div>
+
+          <div class="kpi-card warning">
+            <div class="kpi-top">
+              <span>预警件数</span>
+              <span class="trend down">-6%</span>
+            </div>
+            <div class="kpi-value">23</div>
+            <div class="kpi-footer">超期 / 参数超标 / 报废期</div>
+          </div>
+
+          <div class="kpi-card neutral">
+            <div class="kpi-top">
+              <span>今日完成工单</span>
+              <span class="trend up">+5</span>
+            </div>
+            <div class="kpi-value">148</div>
+            <div class="kpi-footer">目标 160，已完成 92.5%</div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel large-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">轮轴数字身份</div>
+                <h2>轮轴全生命周期追踪</h2>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <a class="primary-btn" href="axle-new.html" style="text-decoration: none; display: inline-flex; align-items: center;">新建轮轴</a>
+                <button class="text-btn">查看全部</button>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>轮轴ID</th>
+                    <th>车型</th>
+                    <th>车号</th>
+                    <th>状态</th>
+                    <th>最新检测</th>
+                    <th>修程</th>
+                  </tr>
+                </thead>
+                <tbody id="axleTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel side-panel">
+            <div class="panel-header small-header">
+              <div>
+                <div class="eyebrow">关键事件</div>
+                <h2>轮轴概况</h2>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <div class="detail-top">
+                <div>
+                  <div class="detail-label">当前关注</div>
+                  <div class="detail-title">AX-20240618-104</div>
+                </div>
+                <span class="status-tag ok">在修</span>
+              </div>
+
+              <div class="detail-grid">
+                <div>
+                  <span>生产日期</span>
+                  <strong>2024-06-18</strong>
+                </div>
+                <div>
+                  <span>装机日期</span>
+                  <strong>2024-08-22</strong>
+                </div>
+                <div>
+                  <span>累计检修</span>
+                  <strong>3 次</strong>
+                </div>
+                <div>
+                  <span>当前磨损</span>
+                  <strong>2.8 mm</strong>
+                </div>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="dot"></div>
+                  <div>
+                    <strong>09:30</strong>
+                    <p>轮对尺寸检测完成，数据已上传</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="dot warn"></div>
+                  <div>
+                    <strong>10:15</strong>
+                    <p>超声波探伤发现裂纹风险，已转工位复检</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="dot success"></div>
+                  <div>
+                    <strong>11:05</strong>
+                    <p>修复完成，待调度员复核签字</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lower-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">数据采集</div>
+                <h2>工位实时采集状态</h2>
+              </div>
+            </div>
+
+            <div class="station-list" id="stationList"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">调度管理</div>
+                <h2>生产节拍看板</h2>
+              </div>
+            </div>
+
+            <div class="schedule-list" id="scheduleList"></div>
+          </div>
+
+          <div class="panel alert-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">异常预警</div>
+                <h2>今日预警汇总</h2>
+              </div>
+            </div>
+
+            <div id="alertList" class="alert-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

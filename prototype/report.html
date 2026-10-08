@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 报表统计</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="demo.html" class="nav-item"><span>📌</span> 项目介绍</a>
+          <a href="index.html" class="nav-item"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item"><span>📡</span> 设备采集</a>
+          <a href="dispatch.html" class="nav-item"><span>🧭</span> 生产调度</a>
+          <a href="warning.html" class="nav-item"><span>⚠️</span> 预警中心</a>
+          <a href="report.html" class="nav-item active"><span>📊</span> 报表统计</a>
+          <a href="screen.html" class="nav-item"><span>🖥️</span> 车间大屏</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel detail-page">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">查询统计</div>
+            <h1>报表与统计</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">按日期筛选</button>
+            <button class="primary-btn">导出 Excel</button>
+          </div>
+        </header>
+
+        <section class="kpis">
+          <div class="kpi-card solid">
+            <div class="kpi-top"><span>总检修量</span><span class="trend up">+15%</span></div>
+            <div class="kpi-value">1,248</div>
+            <div class="kpi-footer">本月累计</div>
+          </div>
+          <div class="kpi-card primary">
+            <div class="kpi-top"><span>合格率</span><span class="trend up">+2.4%</span></div>
+            <div class="kpi-value">98.2%</div>
+            <div class="kpi-footer">按轮轴统计</div>
+          </div>
+          <div class="kpi-card warning">
+            <div class="kpi-top"><span>返修率</span><span class="trend down">-1.1%</span></div>
+            <div class="kpi-value">6.7%</div>
+            <div class="kpi-footer">较上月下降</div>
+          </div>
+          <div class="kpi-card neutral">
+            <div class="kpi-top"><span>平均周期</span><span class="trend up">-0.9d</span></div>
+            <div class="kpi-value">3.6d</div>
+            <div class="kpi-footer">从入库到交付</div>
+          </div>
+        </section>
+
+        <section class="report-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">趋势分析</div>
+                <h2>月度检修量统计</h2>
+              </div>
+            </div>
+            <div class="line-chart">
+              <span class="chart-point p1"></span>
+              <span class="chart-point p2"></span>
+              <span class="chart-point p3"></span>
+              <span class="chart-point p4"></span>
+              <span class="chart-point p5"></span>
+              <span class="chart-point p6"></span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">故障分布</div>
+                <h2>故障类型占比</h2>
+              </div>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut-chart">
+                <div class="donut-inner">42%</div>
+              </div>
+              <div class="legend-list">
+                <div><i class="legend blue"></i> 磨损</div>
+                <div><i class="legend yellow"></i> 裂纹</div>
+                <div><i class="legend green"></i> 振动</div>
+                <div><i class="legend gray"></i> 其他</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="eyebrow">明细数据</div>
+              <h2>轮轴查询结果</h2>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>轮轴ID</th>
+                  <th>车型</th>
+                  <th>车号</th>
+                  <th>监测项目</th>
+                  <th>结果</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AX-20240618-104</td>
+                  <td>CW-200</td>
+                  <td>K65</td>
+                  <td>磨损值</td>
+                  <td>2.8 mm</td>
+                  <td><span class="status-pill warn">预警</span></td>
+                </tr>
+                <tr>
+                  <td>AX-20240618-112</td>
+                  <td>CW-200</td>
+                  <td>K66</td>
+                  <td>裂纹深度</td>
+                  <td>1.2 mm</td>
+                  <td><span class="status-pill ok">正常</span></td>
+                </tr>
+                <tr>
+                  <td>AX-20240618-077</td>
+                  <td>CW-120</td>
+                  <td>T31</td>
+                  <td>振动值</td>
+                  <td>3.0 mm/s</td>
+                  <td><span class="status-pill ok">正常</span></td>
+                </tr>
+                <tr>
+                  <td>AX-20240618-003</td>
+                  <td>CW-200</td>
+                  <td>K41</td>
+                  <td>磨损超标</td>
+                  <td>3.4 mm</td>
+                  <td><span class="status-pill alert">严重</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

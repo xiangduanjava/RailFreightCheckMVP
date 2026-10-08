@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 审批中心</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="demo.html" class="nav-item"><span>📌</span> 项目介绍</a>
+          <a href="index.html" class="nav-item"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item"><span>📡</span> 设备采集</a>
+          <a href="dispatch.html" class="nav-item"><span>🧭</span> 生产调度</a>
+          <a href="warning.html" class="nav-item"><span>⚠️</span> 预警中心</a>
+          <a href="report.html" class="nav-item"><span>📊</span> 报表统计</a>
+          <a href="screen.html" class="nav-item"><span>🖥️</span> 车间大屏</a>
+          <a href="task-panel.html" class="nav-item"><span>✅</span> 任务操作</a>
+          <a href="approval.html" class="nav-item active"><span>📝</span> 审批中心</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel detail-page">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">审签流程</div>
+            <h1>审批中心</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">全部审批</button>
+            <button class="primary-btn">提交审批</button>
+          </div>
+        </header>
+
+        <section class="approval-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">待审批</div>
+                <h2>审批列表</h2>
+              </div>
+            </div>
+
+            <div class="approval-list">
+              <div class="approval-item selected">
+                <div>
+                  <strong>G82 车次交付签字</strong>
+                  <span>申请人：车间质检组</span>
+                </div>
+                <div class="approval-meta">
+                  <span class="status-tag warn">待审批</span>
+                  <small>2h</small>
+                </div>
+              </div>
+              <div class="approval-item">
+                <div>
+                  <strong>AX-20240618-003 返修确认</strong>
+                  <span>申请人：调度中心</span>
+                </div>
+                <div class="approval-meta">
+                  <span class="status-tag alert">驳回</span>
+                  <small>7h</small>
+                </div>
+              </div>
+              <div class="approval-item">
+                <div>
+                  <strong>超声波复检结果</strong>
+                  <span>申请人：探伤工位</span>
+                </div>
+                <div class="approval-meta">
+                  <span class="status-tag ok">已通过</span>
+                  <small>1d</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">审批详情</div>
+                <h2>签字申请内容</h2>
+              </div>
+            </div>
+
+            <div class="approval-detail">
+              <div class="approval-box">
+                <span>车次</span>
+                <strong>G82</strong>
+              </div>
+              <div class="approval-box">
+                <span>检修状态</span>
+                <strong>已完成</strong>
+              </div>
+              <div class="approval-box">
+                <span>审批结论</span>
+                <strong>待签字</strong>
+              </div>
+
+              <label class="approval-text">
+                <span>审批意见</span>
+                <textarea rows="5">轮轴磨损检测结果符合标准，修复后试运行数据稳定，建议批准交付。</textarea>
+              </label>
+
+              <div class="approval-action-row">
+                <button class="ghost-btn">拒绝</button>
+                <button class="primary-btn">批准</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

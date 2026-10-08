@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 任务操作</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="demo.html" class="nav-item"><span>📌</span> 项目介绍</a>
+          <a href="index.html" class="nav-item"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item"><span>📡</span> 设备采集</a>
+          <a href="dispatch.html" class="nav-item"><span>🧭</span> 生产调度</a>
+          <a href="warning.html" class="nav-item"><span>⚠️</span> 预警中心</a>
+          <a href="report.html" class="nav-item"><span>📊</span> 报表统计</a>
+          <a href="screen.html" class="nav-item"><span>🖥️</span> 车间大屏</a>
+          <a href="task-panel.html" class="nav-item active"><span>✅</span> 任务操作</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel detail-page">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">任务中心</div>
+            <h1>工单操作台</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">任务筛选</button>
+            <button class="primary-btn">新建任务</button>
+          </div>
+        </header>
+
+        <section class="task-layout">
+          <div class="panel task-list-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">待办任务</div>
+                <h2>当前工单列表</h2>
+              </div>
+            </div>
+
+            <div class="task-list">
+              <div class="task-item selected">
+                <div>
+                  <strong>轮轴复检工单</strong>
+                  <span>AX-20240618-112 · K66</span>
+                </div>
+                <div class="task-meta">
+                  <span class="status-tag warn">待复检</span>
+                  <small>30 min</small>
+                </div>
+              </div>
+              <div class="task-item">
+                <div>
+                  <strong>磨损超标处理</strong>
+                  <span>AX-20240618-003 · K41</span>
+                </div>
+                <div class="task-meta">
+                  <span class="status-tag alert">高优先级</span>
+                  <small>12 min</small>
+                </div>
+              </div>
+              <div class="task-item">
+                <div>
+                  <strong>质检签字</strong>
+                  <span>G82 车次交付验收</span>
+                </div>
+                <div class="task-meta">
+                  <span class="status-tag ok">待确认</span>
+                  <small>45 min</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel task-detail-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">任务详情</div>
+                <h2>轮轴复检工单</h2>
+              </div>
+            </div>
+
+            <div class="task-detail-card">
+              <div class="task-summary">
+                <div>
+                  <span>工单编号</span>
+                  <strong>WO-20261005-011</strong>
+                </div>
+                <div>
+                  <span>责任人</span>
+                  <strong>张工 / 车间 A2</strong>
+                </div>
+                <div>
+                  <span>计划时长</span>
+                  <strong>90 分钟</strong>
+                </div>
+              </div>
+
+              <div class="task-form">
+                <label>
+                  <span>处理建议</span>
+                  <textarea rows="4">根据超声波探伤结果复核轮轴裂纹深度，确认后进行修复与回炉检测。</textarea>
+                </label>
+                <label>
+                  <span>工位状态</span>
+                  <select>
+                    <option>待复检</option>
+                    <option>修复中</option>
+                    <option>已完成</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="task-actions">
+                <button class="ghost-btn">保存草稿</button>
+                <button class="primary-btn">提交处理</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

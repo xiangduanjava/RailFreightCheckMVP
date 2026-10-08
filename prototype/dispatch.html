@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 生产调度</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="demo.html" class="nav-item"><span>📌</span> 项目介绍</a>
+          <a href="index.html" class="nav-item"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item"><span>📡</span> 设备采集</a>
+          <a href="dispatch.html" class="nav-item active"><span>🧭</span> 生产调度</a>
+          <a href="warning.html" class="nav-item"><span>⚠️</span> 预警中心</a>
+          <a href="report.html" class="nav-item"><span>📊</span> 报表统计</a>
+          <a href="screen.html" class="nav-item"><span>🖥️</span> 车间大屏</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel detail-page">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">生产流程管控</div>
+            <h1>生产调度看板</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">排班计划</button>
+            <button class="primary-btn">新增工单</button>
+          </div>
+        </header>
+
+        <section class="dispatch-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">当前工单</div>
+                <h2>检修任务清单</h2>
+              </div>
+            </div>
+            <div class="ticket-list">
+              <div class="ticket-item">
+                <div>
+                  <strong>工单 #G-104</strong>
+                  <span>K65 车次扣修 · 轮轴 4/8 完成</span>
+                </div>
+                <div class="ticket-meta">
+                  <span class="status-tag ok">正常</span>
+                  <small>08:30-12:00</small>
+                </div>
+              </div>
+              <div class="ticket-item">
+                <div>
+                  <strong>工单 #G-118</strong>
+                  <span>K66 车次巡检 · 超声波复检待确认</span>
+                </div>
+                <div class="ticket-meta">
+                  <span class="status-tag warn">待确认</span>
+                  <small>09:00-13:30</small>
+                </div>
+              </div>
+              <div class="ticket-item">
+                <div>
+                  <strong>工单 #G-097</strong>
+                  <span>T31 车次返修 · 轮轴装配中</span>
+                </div>
+                <div class="ticket-meta">
+                  <span class="status-tag ok">执行中</span>
+                  <small>10:15-15:00</small>
+                </div>
+              </div>
+              <div class="ticket-item">
+                <div>
+                  <strong>工单 #G-145</strong>
+                  <span>G82 车次交付 · 质检签字待审批</span>
+                </div>
+                <div class="ticket-meta">
+                  <span class="status-tag alert">超时</span>
+                  <small>11:00-16:30</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">节拍监控</div>
+                <h2>工位效率</h2>
+              </div>
+            </div>
+            <div class="efficiency-list">
+              <div class="efficiency-row">
+                <span>工位 A1</span>
+                <div class="progress-track"><div class="progress-fill" style="width: 92%"></div></div>
+                <strong>92%</strong>
+              </div>
+              <div class="efficiency-row">
+                <span>工位 A2</span>
+                <div class="progress-track"><div class="progress-fill warning" style="width: 72%"></div></div>
+                <strong>72%</strong>
+              </div>
+              <div class="efficiency-row">
+                <span>工位 B3</span>
+                <div class="progress-track"><div class="progress-fill success" style="width: 88%"></div></div>
+                <strong>88%</strong>
+              </div>
+              <div class="efficiency-row">
+                <span>工位 C4</span>
+                <div class="progress-track"><div class="progress-fill warning" style="width: 58%"></div></div>
+                <strong>58%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="eyebrow">流程状态</div>
+              <h2>一车一档管理</h2>
+            </div>
+          </div>
+          <div class="flow-board">
+            <div class="flow-step completed"><span>01</span><strong>扣修计划</strong></div>
+            <div class="flow-step completed"><span>02</span><strong>数据采集</strong></div>
+            <div class="flow-step active"><span>03</span><strong>检修执行</strong></div>
+            <div class="flow-step"><span>04</span><strong>质检签字</strong></div>
+            <div class="flow-step"><span>05</span><strong>交付归档</strong></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>铁路货车智能检修系统 - 轮轴详情</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">铁</div>
+          <div>
+            <div class="brand-title">检修决策平台</div>
+            <div class="brand-subtitle">Rail Freight Check</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="index.html" class="nav-item"><span>🏠</span> 总览</a>
+          <a href="axle-detail.html" class="nav-item active"><span>🧩</span> 轮轴详情</a>
+          <a href="device.html" class="nav-item"><span>📡</span> 设备采集</a>
+          <a href="index.html" class="nav-item"><span>🧭</span> 生产调度</a>
+          <a href="index.html" class="nav-item"><span>⚠️</span> 预警中心</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel detail-page">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">轮轴数字身份证</div>
+            <h1>AX-20240618-104</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">导出履历</button>
+            <button class="primary-btn">更新状态</button>
+          </div>
+        </header>
+
+        <section class="profile-header">
+          <div class="profile-card">
+            <div class="profile-main">
+              <div class="barcode">||||||||||||||||||||||||</div>
+              <div>
+                <div class="detail-label">轮轴编号</div>
+                <div class="detail-title">AX-20240618-104</div>
+              </div>
+            </div>
+            <span class="status-tag ok">在修中</span>
+          </div>
+        </section>
+
+        <section class="detail-grid-2">
+          <div class="panel detail-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">基础信息</div>
+                <h2>轮轴信息卡</h2>
+              </div>
+            </div>
+            <div class="info-grid">
+              <div><span>车型</span><strong>CW-200</strong></div>
+              <div><span>车号</span><strong>K65</strong></div>
+              <div><span>生产厂家</span><strong>XX铁路轴承厂</strong></div>
+              <div><span>生产日期</span><strong>2024-06-18</strong></div>
+              <div><span>装机日期</span><strong>2024-08-22</strong></div>
+              <div><span>当前状态</span><strong>检修中</strong></div>
+              <div><span>累计检修</span><strong>3 次</strong></div>
+              <div><span>剩余寿命</span><strong>2,100 km</strong></div>
+            </div>
+          </div>
+
+          <div class="panel detail-panel">
+            <div class="panel-header">
+              <div>
+                <div class="eyebrow">检修参数</div>
+                <h2>关键检测指标</h2>
+              </div>
+            </div>
+            <div class="metrics-stack">
+              <div class="metric-row">
+                <span>轮径磨损</span>
+                <div class="mini-progress"><i style="width: 66%"></i></div>
+                <strong>2.8 mm</strong>
+              </div>
+              <div class="metric-row">
+                <span>裂纹深度</span>
+                <div class="mini-progress"><i style="width: 34%"></i></div>
+                <strong>1.2 mm</strong>
+              </div>
+              <div class="metric-row">
+                <span>振动值</span>
+                <div class="mini-progress"><i style="width: 48%"></i></div>
+                <strong>3.2 mm/s</strong>
+              </div>
+              <div class="metric-row">
+                <span>温升</span>
+                <div class="mini-progress"><i style="width: 52%"></i></div>
+                <strong>41 ℃</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <div class="eyebrow">全生命周期</div>
+              <h2>履历记录</h2>
+            </div>
+          </div>
+          <div class="history-list">
+            <div class="history-item">
+              <span class="history-date">2024-06-18</span>
+              <div>
+                <strong>生产出厂登记</strong>
+                <p>轮轴制造完成，完成条码创建与基础参数录入。</p>
+              </div>
+            </div>
+            <div class="history-item">
+              <span class="history-date">2024-08-22</span>
+              <div>
+                <strong>装车上线</strong>
+                <p>装机到 K65 列车，初始状态正常。</p>
+              </div>
+            </div>
+            <div class="history-item warning-item">
+              <span class="history-date">2026-10-04</span>
+              <div>
+                <strong>复检处理</strong>
+                <p>超声波探伤发现裂纹风险，已转入中修检修流程。</p>
+              </div>
+            </div>
+            <div class="history-item success-item">
+              <span class="history-date">待完成</span>
+              <div>
+                <strong>修复验收</strong>
+                <p>等待工位质检签字和最终交付复核。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="axle-detail.js"></script>
+  </body>
+</html>
